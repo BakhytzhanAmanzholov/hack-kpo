@@ -1,0 +1,15 @@
+@import 'src/styles/base/variables';
+
+.room-outer {
+  margin-top: 50px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

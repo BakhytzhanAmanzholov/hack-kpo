@@ -1,0 +1,46 @@
+@import 'src/styles/base/variables';
+
+.login-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //background: $app-dark-back;
+}
+
+.form {
+  width: 400px;
+  border-radius: $border-radius-2;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 50px;
+  background: #fff;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+:host {
+  ::ng-deep {
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: rgba(0,0,0,0.02) !important;
+    }
+  }
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  button {
+    font-size: 1.25rem;
+    font-weight: normal;
+    padding: 5px 20px;
+  }
+}

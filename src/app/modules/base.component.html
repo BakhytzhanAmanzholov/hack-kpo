@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <div class="container header">
+        <span>Mixmeet</span>
+        <nav>
+            <button mat-button routerLink="/rooms">
+                Rooms
+            </button>
+            <button mat-button routerLink="/priority">
+                Priority
+            </button>
+            <button mat-button routerLink="/metrics">
+                Metrics
+            </button>
+            <button mat-button (click)="logout()" style="margin-left: 30px">
+                Log out
+            </button>
+        </nav>
+    </div>
+</mat-toolbar>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

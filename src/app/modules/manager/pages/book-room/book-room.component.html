@@ -1,0 +1,50 @@
+<div class="book-outer">
+    <div class="mat-display-1 section-title">Book room</div>
+
+        <form [formGroup]="form">
+
+            <div class="form-block">
+                <mat-form-field appearance="fill">
+                    <mat-label>Title</mat-label>
+                    <input formControlName="title" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Guests</mat-label>
+                    <mat-select formControlName="guestIds" multiple>
+                        <mat-option *ngFor="let user of users" [value]="user.id">{{user.username}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Step size</mat-label>
+                    <input [formControl]="stepSize" type="number" min="1" max="8" matInput>
+                </mat-form-field>
+
+                <mat-grid-list cols="32" class="timeline">
+                    <mat-grid-tile colspan="2">
+                    </mat-grid-tile>
+                    <mat-grid-tile *ngFor="let time of timePoints" colspan="2">
+                        <div class="top-time">
+                            {{time}}
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+                <mat-grid-list *ngFor="let date of dates" cols="32" class="date-row">
+                    <mat-grid-tile colspan="2">
+                        {{date}}
+                    </mat-grid-tile>
+                    <mat-grid-tile *ngFor="let tile of tiles" (click)="bookTile(tile['id'])">
+                        <div class="time-cell" *ngIf="(tile['event']==null) && (!(this.activeTilesLeft <= tile['id'] && tile['id'] <= this.activeTilesRight))">
+                        </div>
+                        <div class="time-cell active-cell" *ngIf="(tile['event']!=null) || ((this.activeTilesLeft <= tile['id'] && tile['id'] <= this.activeTilesRight))">
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+                <button (click)="submit()" class="submit-btn" mat-stroked-button>Create</button>
+            </div>
+
+        </form>
+</div>

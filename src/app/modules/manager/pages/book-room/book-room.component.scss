@@ -1,0 +1,46 @@
+@import 'src/styles/base/variables';
+
+.book-outer {
+  margin-top: 50px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+
+.time-cell {
+  content: "";
+  background: green;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+}
+
+.active-cell {
+  background: red;
+}
+
+.top-time {
+  width: 100%;
+}
+
+.timeline {
+  overflow-x: auto;
+}
+
+.date-row {
+  margin-bottom: 10px;
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.submit-btn {
+  margin-top: 30px;
+}

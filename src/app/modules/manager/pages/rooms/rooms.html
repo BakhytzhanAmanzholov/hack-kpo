@@ -1,0 +1,40 @@
+<div class="rooms-outer">
+    <div class="mat-display-1 section-title">Rooms</div>
+
+    <div class="rooms-list">
+        <ng-container *ngFor="let room of rooms">
+            <div class="room-card" *ngIf="room['type'] == 'MEETING'">
+                <div class="left">
+                    <div class="mat-display-1">
+                        {{ room['title'] }}
+                    </div>
+                    <span>
+                        Room: {{ room["room"] }}
+                    </span>
+                </div>
+                <div>
+                    <button [routerLink]="'/room/' + room['id']" mat-stroked-button color="primary">Open</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+<!--    <mat-grid-list cols="28" class="timeline">-->
+<!--        <mat-grid-tile colspan="2">-->
+<!--        </mat-grid-tile>-->
+<!--        <mat-grid-tile *ngFor="let time of timePoints" colspan="2">-->
+<!--            <div class="top-time">-->
+<!--                {{time}}-->
+<!--            </div>-->
+<!--        </mat-grid-tile>-->
+<!--    </mat-grid-list>-->
+
+<!--    <mat-grid-list *ngFor="let date of dates" cols="28" class="date-row">-->
+<!--        <mat-grid-tile colspan="2">-->
+<!--            {{date}}-->
+<!--        </mat-grid-tile>-->
+<!--        <mat-grid-tile *ngFor="let tile of tiles" class="time-cell">-->
+<!--        </mat-grid-tile>-->
+<!--    </mat-grid-list>-->
+
+</div>

@@ -1,0 +1,24 @@
+@import 'src/styles/base/variables';
+
+.rooms-outer {
+  margin-top: 50px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+/* Rooms */
+.rooms-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: $border-radius-1;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 20px;
+  padding: 30px;
+}

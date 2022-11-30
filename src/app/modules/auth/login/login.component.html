@@ -1,0 +1,20 @@
+<div class="login-outer">
+    <form [formGroup]="loginForm" (submit)="login()" class="form">
+        <div class="form-title mat-display-2">
+            Mixmeet
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Login</mat-label>
+            <input formControlName="email" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" type="password" matInput>
+        </mat-form-field>
+        <div class="form-submit">
+            <button mat-stroked-button type="submit()">
+                Sign in
+            </button>
+        </div>
+    </form>
+</div>
